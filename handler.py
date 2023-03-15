@@ -7,9 +7,9 @@ sleep_time = int(os.environ.get('SLEEP_TIME', 3))
 
 # load your model(s) into vram here
 
-tokenizer = AutoTokenizer.from_pretrained("./model", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("/model", trust_remote_code=True)
 model = AutoModel.from_pretrained(
-    "./model", trust_remote_code=True).half().cuda()
+    "/model", trust_remote_code=True).half().cuda()
 model.eval()
 
 
